@@ -90,14 +90,10 @@
 <div class="subscribe-form">
   <h2>Subscribe for updates</h2>
   <p>Sign up to to receive updates from SoundMinds.ai</p>
-  <form action="https://hooks.zapier.com/hooks/catch/18667129/376gq8h" method="POST">
+  <form action="${ZAPIER_WEBHOOK_URL}" method="POST">
     <input type="email" name="email" placeholder="Enter your email" required>
     <button type="submit">Subscribe</button>
   </form>
-  <!-- <form id="subscription-form" action="https://hooks.zapier.com/hooks/catch/18667129/376gq8h/" method="POST">
-    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-    <input type="submit" value="Subscribe">
-  </form> -->
 </div>
 
 </body>
