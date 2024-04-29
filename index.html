@@ -75,7 +75,6 @@
     background-color: #45a049;
   }
 </style>
-<script type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 
 </head>
 <body>
@@ -89,10 +88,13 @@
   
 </div>
 <div class="subscribe-form">
-  <!--<h2>Subscribe for updates</h2>
+  <h2>Subscribe for updates</h2>
   <p>Sign up to to receive updates from SoundMinds.ai</p>
-  -->
-  <zapier-interfaces-page-embed page-id='clvigvbyu000111sapemcp3u7' no-background='false'></zapier-interfaces-page-embed>
+  
+  <form action="https://hooks.zapier.com/hooks/catch/18667129/37fz1m8/" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
 </div>
 
 </body>
