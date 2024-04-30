@@ -46,7 +46,7 @@
     text-align: left;
     color: white;
   }
-  .subscribe-form {
+  .subscribe-form-div {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
@@ -76,25 +76,29 @@
   }
 </style>
 <script>
-  // Prevent form submission
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var email = e.target.email.value;
-    if (email) {
-      e.target.email.value = '';
-      fetch(e.target.action, {
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('subscribe-form');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      var formData = new FormData(form);
+  
+      fetch(form.action, {
         method: 'POST',
-        body: new URLSearchParams({ email: email }),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
+        body: formData,
+      })
+      .then(response => response.json()) // Assuming the server responds with JSON
+      .then(data => {
+        alert('Successfully subscribed!'); // Show success message
+        // Optionally, handle the response data
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Subscription failed. Please try again later.'); // Show error message
       });
-      alert('Thank you for subscribing!');
-    }
+    });
   });
-</script>
-
-
+  </script>
 </head>
 <body>
 
@@ -106,11 +110,11 @@
   </div>
   
 </div>
-<div class="subscribe-form">
+<div class="subscribe-form-div">
   <h2>Subscribe for updates</h2>
   <p>Sign up to to receive updates from SoundMinds.ai</p>
   
-  <form action="https://hooks.zapier.com/hooks/catch/18667129/37fz1m8/" method="POST">
+  <form id="subscribe-form" action="https://hooks.zapier.com/hooks/catch/18667129/37fz1m8/" method="POST">
     <input type="email" name="email" placeholder="Enter your email" required>
     <button type="submit">Subscribe</button>
   </form>
