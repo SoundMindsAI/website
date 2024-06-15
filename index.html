@@ -75,37 +75,7 @@
     background-color: #45a049;
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById('subscribe-form');
-  
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-      var formData = new FormData(form);
-  
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-      })
-      .then(response => response.json()) // Assuming the server responds with JSON
-      .then(data => {
-        alert('Successfully subscribed!'); // Show success message
-        // Optionally, handle the response data
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Subscription failed. Please try again later.'); // Show error message
-      });
-    });
-  });
-  </script>
-  <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "c253d240-7150-437c-bcf1-77bde85ef7c9",
-        apiHost: "http://localhost:3000",
-    })
-</script>
+
 </head>
 <body>
 
