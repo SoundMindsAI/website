@@ -56,8 +56,11 @@
     text-align: center;
     color: black;
   }
-  form {
-    margin-top: 5px;
+  .subscribe-form-div form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items at the bottom */
+    gap: 10px; /* Add some space between the elements */
   }
   input[type=email], input[type=submit] {
     padding: 10px;
@@ -74,6 +77,10 @@
   input[type=submit]:hover {
     background-color: #45a049;
   }
+  .large-textarea {
+    width: 400px;
+    height: 30px;
+  }
 </style>
 
 </head>
@@ -86,6 +93,16 @@
     <div class="title">SOUNDMINDS.AI</div>
   </div>
 </div>
-  
+<div>
+  <div class="subscribe-form-div">
+    <form action="https://formspree.io/f/mdknwnqa" method="POST">
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" required>&nbsp;&nbsp;
+      <label for="message">Message: </label>
+      <textarea id="message" name="message" required class="large-textarea"></textarea>&nbsp;&nbsp;
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
 </body>
 </html>
