@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Clear Mind Logo 2: Horizon Line -->
+    <g transform="translate(30, 30)">
+        <!-- Horizon Circle -->
+        <circle cx="0" cy="0" r="20" fill="#3498db" opacity="0.1"/>
+        
+        <!-- Horizontal Line -->
+        <line x1="-20" y1="0" x2="20" y2="0" 
+              stroke="#3498db" stroke-width="2" opacity="0.9">
+            <animate attributeName="x1" 
+                     values="-20;-22;-20" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+            <animate attributeName="x2" 
+                     values="20;22;20" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </line>
+
+        <!-- Reflection -->
+        <path d="M-20,0 Q0,10 20,0" 
+              stroke="#3498db" fill="none" stroke-width="1" opacity="0.4">
+            <animate attributeName="d" 
+                     values="M-20,0 Q0,10 20,0;M-20,0 Q0,12 20,0;M-20,0 Q0,10 20,0" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </path>
+    </g>
+
+    <!-- Company Name -->
+    <g transform="translate(85, 33)">
+        <text font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">
+            <tspan x="0" y="0" font-weight="bold">Sound</tspan>
+            <tspan x="50" y="0" font-weight="300">Minds</tspan>
+            <tspan x="95" y="0" font-weight="300">.ai</tspan>
+        </text>
+    </g>
+</svg>

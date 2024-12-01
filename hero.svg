@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e1e8ed" stroke-width="0.5"/>
+    </pattern>
+    <rect width="500" height="400" fill="url(#grid)" opacity="0.2"/>
+
+    <!-- Large Network Structure -->
+    <g transform="translate(250, 200)">
+        <!-- Central Hub with Inner Ring -->
+        <g>
+            <circle cx="0" cy="0" r="40" fill="#3498db" opacity="0.2">
+                <animate attributeName="r" values="38;42;38" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="0" cy="0" r="30" fill="#3498db" opacity="0.9">
+                <animate attributeName="r" values="28;32;28" dur="2s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+
+        <!-- Primary Nodes - Square Pattern -->
+        <g>
+            <!-- Top Left Node -->
+            <circle cx="-90" cy="-90" r="20" fill="#3498db" opacity="0.7">
+                <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+            </circle>
+            <path d="M-25,-25 L-75,-75" stroke="#3498db" stroke-width="3" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+            </path>
+
+            <!-- Top Right Node -->
+            <circle cx="90" cy="-90" r="20" fill="#3498db" opacity="0.7">
+                <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+            </circle>
+            <path d="M25,-25 L75,-75" stroke="#3498db" stroke-width="3" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+            </path>
+
+            <!-- Bottom Right Node -->
+            <circle cx="90" cy="90" r="20" fill="#3498db" opacity="0.7">
+                <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+            </circle>
+            <path d="M25,25 L75,75" stroke="#3498db" stroke-width="3" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+            </path>
+
+            <!-- Bottom Left Node -->
+            <circle cx="-90" cy="90" r="20" fill="#3498db" opacity="0.7">
+                <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+            </circle>
+            <path d="M-25,25 L-75,75" stroke="#3498db" stroke-width="3" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+            </path>
+        </g>
+
+        <!-- Secondary Nodes - Diamond Pattern -->
+        <g>
+            <!-- Top Node -->
+            <circle cx="0" cy="-130" r="15" fill="#3498db" opacity="0.6">
+                <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+            <path d="M0,-35 L0,-115" stroke="#3498db" stroke-width="2" opacity="0.4">
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+            </path>
+
+            <!-- Right Node -->
+            <circle cx="130" cy="0" r="15" fill="#3498db" opacity="0.6">
+                <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+            </circle>
+            <path d="M35,0 L115,0" stroke="#3498db" stroke-width="2" opacity="0.4">
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="1s"/>
+            </path>
+
+            <!-- Bottom Node -->
+            <circle cx="0" cy="130" r="15" fill="#3498db" opacity="0.6">
+                <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+            </circle>
+            <path d="M0,35 L0,115" stroke="#3498db" stroke-width="2" opacity="0.4">
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+            </path>
+
+            <!-- Left Node -->
+            <circle cx="-130" cy="0" r="15" fill="#3498db" opacity="0.6">
+                <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite" begin="1.6s"/>
+            </circle>
+            <path d="M-35,0 L-115,0" stroke="#3498db" stroke-width="2" opacity="0.4">
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+            </path>
+        </g>
+
+        <!-- Rotating Connection Lines -->
+        <g>
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0"
+                to="360"
+                dur="20s"
+                repeatCount="indefinite"/>
+            <!-- Diagonal Lines -->
+            <path d="M-60,-60 L60,60" stroke="#3498db" stroke-width="1" opacity="0.2"/>
+            <path d="M60,-60 L-60,60" stroke="#3498db" stroke-width="1" opacity="0.2"/>
+        </g>
+
+        <!-- Data Flow Particles -->
+        <g>
+            <!-- Square Pattern Flow -->
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M-25,-25 L-75,-75" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M25,-25 L75,-75" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M25,25 L75,75" dur="1.5s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M-25,25 L-75,75" dur="1.5s" repeatCount="indefinite" begin="1.5s"/>
+            </circle>
+
+            <!-- Diamond Pattern Flow -->
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M0,-35 L0,-115" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M35,0 L115,0" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M0,35 L0,115" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+            </circle>
+            <circle r="3" fill="#3498db">
+                <animateMotion path="M-35,0 L-115,0" dur="2s" repeatCount="indefinite" begin="1.7s"/>
+            </circle>
+        </g>
+    </g>
+</svg>

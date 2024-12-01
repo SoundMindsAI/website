@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="neuronGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4169E1"/>
+            <stop offset="100%" style="stop-color:#87CEEB"/>
+        </linearGradient>
+        <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FFD700"/>
+            <stop offset="100%" style="stop-color:#FFA500"/>
+        </linearGradient>
+        
+        <!-- Filters -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background Grid -->
+    <g stroke="#E6E6FA" stroke-width="0.5" opacity="0.3">
+        <path d="M0,100 L800,100 M0,200 L800,200 M0,300 L800,300 M0,400 L800,400 M0,500 L800,500"/>
+        <path d="M100,0 L100,600 M200,0 L200,600 M300,0 L300,600 M400,0 L400,600 M500,0 L500,600 M600,0 L600,600 M700,0 L700,600"/>
+    </g>
+
+    <!-- Neural Network -->
+    <g transform="translate(400,300)">
+        <!-- Nodes -->
+        <g class="nodes">
+            <circle cx="-150" cy="-100" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="-150" cy="0" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+            </circle>
+            <circle cx="-150" cy="100" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+            
+            <circle cx="0" cy="-50" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+            </circle>
+            <circle cx="0" cy="50" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+            </circle>
+            
+            <circle cx="150" cy="0" r="20" fill="url(#neuronGradient)" filter="url(#glow)">
+                <animate attributeName="r" values="20;22;20" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+            </circle>
+        </g>
+
+        <!-- Connections -->
+        <g class="connections" stroke="url(#connectionGradient)" stroke-width="2">
+            <path d="M-150,-100 L0,-50 L150,0">
+                <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <path d="M-150,0 L0,-50 L150,0">
+                <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+            </path>
+            <path d="M-150,100 L0,50 L150,0">
+                <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite" begin="1s"/>
+            </path>
+            <path d="M-150,0 L0,50 L150,0">
+                <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+            </path>
+        </g>
+
+        <!-- Pulse Effects -->
+        <g class="pulses">
+            <circle cx="-150" cy="-100" r="5" fill="#FFD700" opacity="0.8">
+                <animate attributeName="r" values="5;30;5" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="150" cy="0" r="5" fill="#FFD700" opacity="0.8">
+                <animate attributeName="r" values="5;30;5" dur="2s" repeatCount="indefinite" begin="1s"/>
+                <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+        </g>
+    </g>
+</svg>

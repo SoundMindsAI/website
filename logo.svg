@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Rising Stars Mind Logo -->
+    <g transform="translate(30, 30)">
+        <!-- Brain Outline -->
+        <path d="M-20,0 C-20,-15 -10,-20 0,-20 C10,-20 20,-15 20,0 C20,15 10,20 0,20 C-10,20 -20,15 -20,0" 
+              stroke="#3498db" fill="none" stroke-width="2" opacity="0.9">
+            <animate attributeName="d" 
+                     values="M-20,0 C-20,-15 -10,-20 0,-20 C10,-20 20,-15 20,0 C20,15 10,20 0,20 C-10,20 -20,15 -20,0;
+                            M-22,0 C-22,-17 -12,-22 0,-22 C12,-22 22,-17 22,0 C22,17 12,22 0,22 C-12,22 -22,17 -22,0;
+                            M-20,0 C-20,-15 -10,-20 0,-20 C10,-20 20,-15 20,0 C20,15 10,20 0,20 C-10,20 -20,15 -20,0"
+                     dur="3s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- Rising Stars -->
+        <g>
+            <!-- Star 1 -->
+            <path d="M-10,-5 L-8,-5 L-7,-8 L-6,-5 L-4,-5 L-6,-3 L-5,0 L-7,-2 L-9,0 L-8,-3 Z" fill="#3498db">
+                <animate attributeName="transform" 
+                         values="translate(0,0); translate(0,-10); translate(0,0)"
+                         dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" 
+                         values="0.2;0.8;0.2"
+                         dur="2s" repeatCount="indefinite"/>
+            </path>
+            <!-- Star 2 -->
+            <path d="M4,-8 L6,-8 L7,-11 L8,-8 L10,-8 L8,-6 L9,-3 L7,-5 L5,-3 L6,-6 Z" fill="#3498db">
+                <animate attributeName="transform" 
+                         values="translate(0,0); translate(0,-10); translate(0,0)"
+                         dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                <animate attributeName="opacity" 
+                         values="0.2;0.8;0.2"
+                         dur="2s" repeatCount="indefinite" begin="0.5s"/>
+            </path>
+            <!-- Star 3 -->
+            <path d="M-3,5 L-1,5 L0,2 L1,5 L3,5 L1,7 L2,10 L0,8 L-2,10 L-1,7 Z" fill="#3498db">
+                <animate attributeName="transform" 
+                         values="translate(0,0); translate(0,-10); translate(0,0)"
+                         dur="2s" repeatCount="indefinite" begin="1s"/>
+                <animate attributeName="opacity" 
+                         values="0.2;0.8;0.2"
+                         dur="2s" repeatCount="indefinite" begin="1s"/>
+            </path>
+        </g>
+
+        <!-- Positive Energy Rings -->
+        <g>
+            <circle cx="0" cy="0" r="12" stroke="#3498db" stroke-width="1" fill="none" opacity="0.3">
+                <animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="0" cy="0" r="8" stroke="#3498db" stroke-width="1" fill="none" opacity="0.5">
+                <animate attributeName="r" values="8;11;8" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+            </circle>
+            <circle cx="0" cy="0" r="4" fill="#3498db" opacity="0.8">
+                <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+        </g>
+
+        <!-- Floating Joy Particles -->
+        <g>
+            <circle r="1.5" fill="#3498db">
+                <animateMotion path="M0,0 C5,-10 15,-10 20,0" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="1.5" fill="#3498db">
+                <animateMotion path="M0,0 C-5,-10 -15,-10 -20,0" dur="3s" repeatCount="indefinite" begin="1s"/>
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+            <circle r="1.5" fill="#3498db">
+                <animateMotion path="M0,0 C10,-5 10,-15 0,-20" dur="3s" repeatCount="indefinite" begin="2s"/>
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="2s"/>
+            </circle>
+        </g>
+    </g>
+
+    <!-- Company Name -->
+    <g transform="translate(85, 33)">
+        <text font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">
+            <tspan x="0" y="0" font-weight="bold">Sound</tspan>
+            <tspan x="50" y="0" font-weight="300">Minds</tspan>
+            <tspan x="95" y="0" font-weight="300">.ai</tspan>
+        </text>
+    </g>
+</svg>

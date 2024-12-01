@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="puzzleGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4169E1"/>
+            <stop offset="100%" style="stop-color:#1E90FF"/>
+        </linearGradient>
+        <linearGradient id="puzzleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#32CD32"/>
+            <stop offset="100%" style="stop-color:#98FB98"/>
+        </linearGradient>
+        <linearGradient id="puzzleGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFD700"/>
+            <stop offset="100%" style="stop-color:#FFA500"/>
+        </linearGradient>
+        
+        <!-- Filters -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="600" fill="#FFFFFF"/>
+    
+    <!-- Grid Pattern -->
+    <g stroke="#E6E6FA" stroke-width="1" opacity="0.3">
+        <path d="M0,150 h800 M0,300 h800 M0,450 h800"/>
+        <path d="M200,0 v600 M400,0 v600 M600,0 v600"/>
+    </g>
+
+    <!-- Puzzle Pieces -->
+    <g transform="translate(400,300)" filter="url(#glow)">
+        <!-- Center Piece -->
+        <path d="M-50,-50 h60 a20,20 0 0 1 40,0 h60 v60 a20,20 0 0 1 0,40 v60 h-60 a20,20 0 0 1 -40,0 h-60 v-60 a20,20 0 0 1 0,-40 v-60" 
+              fill="url(#puzzleGradient1)">
+            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- Left Piece -->
+        <g transform="translate(-150,0)">
+            <path d="M-50,-50 h60 a20,20 0 0 1 40,0 h60 v60 a20,20 0 0 1 0,40 v60 h-60 a20,20 0 0 1 -40,0 h-60 v-60 a20,20 0 0 1 0,-40 v-60" 
+                  fill="url(#puzzleGradient2)">
+                <animateTransform attributeName="transform"
+                                type="translate"
+                                values="-50,0; 0,0; -50,0"
+                                dur="3s"
+                                repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+            </path>
+        </g>
+
+        <!-- Right Piece -->
+        <g transform="translate(150,0)">
+            <path d="M-50,-50 h60 a20,20 0 0 1 40,0 h60 v60 a20,20 0 0 1 0,40 v60 h-60 a20,20 0 0 1 -40,0 h-60 v-60 a20,20 0 0 1 0,-40 v-60" 
+                  fill="url(#puzzleGradient3)">
+                <animateTransform attributeName="transform"
+                                type="translate"
+                                values="50,0; 0,0; 50,0"
+                                dur="3s"
+                                repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+
+    <!-- Connection Lines -->
+    <g stroke="#4169E1" stroke-width="2" opacity="0.3">
+        <line x1="250" y1="300" x2="350" y2="300">
+            <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="300" x2="550" y2="300">
+            <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+        </line>
+    </g>
+
+    <!-- Particle Effects -->
+    <g>
+        <circle cx="400" cy="300" r="2" fill="#4169E1">
+            <animate attributeName="cx" values="400;450;400" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="400" cy="300" r="2" fill="#32CD32">
+            <animate attributeName="cx" values="400;350;400" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Technology Visualization -->
+    <g transform="translate(300, 200)">
+        <!-- Central Hub -->
+        <circle cx="0" cy="0" r="50" fill="#3498db" opacity="0.9">
+            <animate attributeName="r" 
+                     values="50;52;50" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Connecting Lines and Nodes -->
+        <g>
+            <!-- Node Group 1 -->
+            <g transform="rotate(0)">
+                <line x1="0" y1="-60" x2="0" y2="-120" 
+                      stroke="#3498db" stroke-width="2" opacity="0.6">
+                    <animate attributeName="y2" 
+                             values="-120;-125;-120" 
+                             dur="2s" 
+                             repeatCount="indefinite"/>
+                </line>
+                <circle cx="0" cy="-120" r="15" fill="#3498db" opacity="0.8">
+                    <animate attributeName="cy" 
+                             values="-120;-125;-120" 
+                             dur="2s" 
+                             repeatCount="indefinite"/>
+                </circle>
+            </g>
+
+            <!-- Node Group 2 -->
+            <g transform="rotate(72)">
+                <line x1="0" y1="-60" x2="0" y2="-100" 
+                      stroke="#3498db" stroke-width="2" opacity="0.6">
+                    <animate attributeName="y2" 
+                             values="-100;-105;-100" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="0.4s"/>
+                </line>
+                <circle cx="0" cy="-100" r="12" fill="#3498db" opacity="0.8">
+                    <animate attributeName="cy" 
+                             values="-100;-105;-100" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="0.4s"/>
+                </circle>
+            </g>
+
+            <!-- Node Group 3 -->
+            <g transform="rotate(144)">
+                <line x1="0" y1="-60" x2="0" y2="-110" 
+                      stroke="#3498db" stroke-width="2" opacity="0.6">
+                    <animate attributeName="y2" 
+                             values="-110;-115;-110" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="0.8s"/>
+                </line>
+                <circle cx="0" cy="-110" r="14" fill="#3498db" opacity="0.8">
+                    <animate attributeName="cy" 
+                             values="-110;-115;-110" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="0.8s"/>
+                </circle>
+            </g>
+
+            <!-- Node Group 4 -->
+            <g transform="rotate(216)">
+                <line x1="0" y1="-60" x2="0" y2="-90" 
+                      stroke="#3498db" stroke-width="2" opacity="0.6">
+                    <animate attributeName="y2" 
+                             values="-90;-95;-90" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="1.2s"/>
+                </line>
+                <circle cx="0" cy="-90" r="10" fill="#3498db" opacity="0.8">
+                    <animate attributeName="cy" 
+                             values="-90;-95;-90" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="1.2s"/>
+                </circle>
+            </g>
+
+            <!-- Node Group 5 -->
+            <g transform="rotate(288)">
+                <line x1="0" y1="-60" x2="0" y2="-105" 
+                      stroke="#3498db" stroke-width="2" opacity="0.6">
+                    <animate attributeName="y2" 
+                             values="-105;-110;-105" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="1.6s"/>
+                </line>
+                <circle cx="0" cy="-105" r="13" fill="#3498db" opacity="0.8">
+                    <animate attributeName="cy" 
+                             values="-105;-110;-105" 
+                             dur="2s" 
+                             repeatCount="indefinite"
+                             begin="1.6s"/>
+                </circle>
+            </g>
+        </g>
+
+        <!-- Data Flow Particles -->
+        <g>
+            <circle r="3" fill="#3498db" opacity="0.6">
+                <animateMotion path="M0,0 L0,-120" 
+                              dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" 
+                         values="0.6;0.2;0.6" 
+                         dur="2s" 
+                         repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#3498db" opacity="0.6">
+                <animateMotion path="M0,0 L-114,-37" 
+                              dur="2s" repeatCount="indefinite"
+                              begin="0.4s"/>
+                <animate attributeName="opacity" 
+                         values="0.6;0.2;0.6" 
+                         dur="2s" 
+                         repeatCount="indefinite"
+                         begin="0.4s"/>
+            </circle>
+            <circle r="3" fill="#3498db" opacity="0.6">
+                <animateMotion path="M0,0 L-71,-97" 
+                              dur="2s" repeatCount="indefinite"
+                              begin="0.8s"/>
+                <animate attributeName="opacity" 
+                         values="0.6;0.2;0.6" 
+                         dur="2s" 
+                         repeatCount="indefinite"
+                         begin="0.8s"/>
+            </circle>
+            <circle r="3" fill="#3498db" opacity="0.6">
+                <animateMotion path="M0,0 L71,-97" 
+                              dur="2s" repeatCount="indefinite"
+                              begin="1.2s"/>
+                <animate attributeName="opacity" 
+                         values="0.6;0.2;0.6" 
+                         dur="2s" 
+                         repeatCount="indefinite"
+                         begin="1.2s"/>
+            </circle>
+            <circle r="3" fill="#3498db" opacity="0.6">
+                <animateMotion path="M0,0 L114,-37" 
+                              dur="2s" repeatCount="indefinite"
+                              begin="1.6s"/>
+                <animate attributeName="opacity" 
+                         values="0.6;0.2;0.6" 
+                         dur="2s" 
+                         repeatCount="indefinite"
+                         begin="1.6s"/>
+            </circle>
+        </g>
+
+        <!-- Pulse Ring -->
+        <circle cx="0" cy="0" r="55" stroke="#3498db" stroke-width="1" fill="none" opacity="0.3">
+            <animate attributeName="r" 
+                     values="55;65;55" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+            <animate attributeName="opacity" 
+                     values="0.3;0.1;0.3" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Clear Mind Logo 3: Single Wave -->
+    <g transform="translate(30, 30)">
+        <!-- Background Circle -->
+        <circle cx="0" cy="0" r="20" fill="#3498db" opacity="0.05"/>
+        
+        <!-- Single Wave -->
+        <path d="M-20,0 C-10,-10 10,-10 20,0" 
+              stroke="#3498db" stroke-width="2" fill="none" opacity="0.9">
+            <animate attributeName="d" 
+                     values="M-20,0 C-10,-10 10,-10 20,0;
+                            M-20,0 C-10,-12 10,-12 20,0;
+                            M-20,0 C-10,-10 10,-10 20,0" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </path>
+
+        <!-- Subtle Echo Wave -->
+        <path d="M-20,5 C-10,-5 10,-5 20,5" 
+              stroke="#3498db" stroke-width="1" fill="none" opacity="0.3">
+            <animate attributeName="d" 
+                     values="M-20,5 C-10,-5 10,-5 20,5;
+                            M-20,5 C-10,-7 10,-7 20,5;
+                            M-20,5 C-10,-5 10,-5 20,5" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </path>
+    </g>
+
+    <!-- Company Name -->
+    <g transform="translate(85, 33)">
+        <text font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">
+            <tspan x="0" y="0" font-weight="bold">Sound</tspan>
+            <tspan x="50" y="0" font-weight="300">Minds</tspan>
+            <tspan x="95" y="0" font-weight="300">.ai</tspan>
+        </text>
+    </g>
+</svg>
